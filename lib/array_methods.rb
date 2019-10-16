@@ -9,7 +9,7 @@ end
 
 def find_max_value(array)
   i = 0
-  max = 0
+  max = 0           # won't work if array consists of negative values
   while array[i] do
     if max < array[i]
       max = array[i]
@@ -20,7 +20,15 @@ def find_max_value(array)
 end
 
 def find_min_value(array)
-  array.min
+  i = 0
+  min = array[i]
+  while array[i] do
+    if min > array[i]
+      min = array[i]
+    end
+    i += 1
+  end
+  min
 end
 
 =begin
